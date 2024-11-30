@@ -14,13 +14,6 @@ public class KeyedServiceFactory<T> : IKeyedServiceFactory<T>
 
     public T GetTenantServiceOrDefault(string key)
     {
-        try
-        {
-            return serviceProvider.GetRequiredKeyedService<T>(key);
-        }
-        catch (InvalidOperationException)
-        {
-            return serviceProvider.GetRequiredKeyedService<T>("default");
-        }
+        return serviceProvider.GetKeyedService<T>(key) ?? serviceProvider.GetRequiredKeyedService<T>("default");
     }
 }
