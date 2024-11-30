@@ -2,6 +2,16 @@
 
 GET {{TenantSpecific_HostAddress}}/weatherforecast/
 Accept: application/json
-x-tenant-id: 300
+x-tenant-id: 100
 
 ###
+
+GET {{TenantSpecific_HostAddress}}/weatherforecast/
+Accept: application/json
+x-tenant-id: 200
+
+###
+
+GET {{TenantSpecific_HostAddress}}/weatherforecast/
+Accept: application/json
+x-tenant-id: 300
